@@ -308,7 +308,7 @@ div[data-testid="stPopoverBody"] button[aria-label^="🚩"] {
 # --- 3. DATA LAYER ---
 URL = "https://docs.google.com/spreadsheets/d/1XLiSWYDUagXCsNbLKs_HE-BsaQzgFMw-M8FMU500f0M/edit?usp=sharing"
 
-@st.cache_data(ttl=600)
+@st.cache_data(ttl=60)
 def load_data():
     conn = st.connection("gsheets", type=GSheetsConnection)
     return conn.read(spreadsheet=URL)
